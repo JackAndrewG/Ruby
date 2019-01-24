@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web Ruby</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img src="https://b.kisscc0.com/20180717/ocq/kisscc0-ruby-on-rails-the-ruby-programming-language-comput-ruby-stone-gem-5b4eb8d27abef8.0039820215318857785028.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+        Web Ruby
+      </a>
+    </nav>
+  <div class="container">
+    <nav class="navbar navbar-light bg-light">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link" href="/pages/home">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Institucion</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Carreras</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Profesores</a>
+        </li>
+      </ul>
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link" href="/registro">Registro</a>
+          </li>
+        </ul>
+    </nav>
+  </div>
+    <div class="container">
+      <%= yield%>
+    </div>
+  </body>
+</html>
