@@ -3,7 +3,7 @@
           <table class="table">
               <thead>
                   <tr>
-          <th>id</th> <th>Nombre</th><th>Apellido</th><th>Fecha</th><th>Telefono</th><th>Direccion</th><th>Correo</th><th>Clave</th>
+          <th>id</th> <th>Nombre</th><th>Apellido</th><th>Fecha</th><th>Telefono</th><th>Direccion</th><th>Correo</th><th>Departamento</th><th>Clave</th>
                   </tr>
               </thead>
               <tbody>
@@ -16,6 +16,8 @@
                 <td><%= empleado.telefonoEmpleado %></td>
                 <td><%= empleado.direccionEmpleado %></td>
                 <td><%= empleado.correoEmpleado %></td>
+                <% d=Departamento.find(empleado.departamento_id)%>
+                <td><%= d.nombreDepartamento %></td>
                 <td><input type="password" value="<%= empleado.claveEmpleado %>" disabled></td>
                 </tr>
                 <%end%>

@@ -1,0 +1,23 @@
+<title>Vista Departamento</title>
+<form>
+  <div class="row">
+          <table class="table">
+              <thead>
+                  <tr>
+          <th>id</th> <th>Nombre Departamento</th><th>Nombre Director</th><th>Telefono</th><th>Fecha Registro</th><th>Fecha modificacion</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <% @departamentos.each do |departamento| %>
+                <tr>
+                <td><%= departamento.id %></td>
+                <td><%= departamento.nombreDepartamento %></td>
+                <td><%= departamento.nombreDirector %></td>
+                <td><%= departamento.telefono %></td>
+                <td><%= departamento.created_at %></td>
+                <td><%= departamento.updated_at %></td>
+                </tr>
+                <%end%>
+              </tbody>
+          </table>
+      </div>

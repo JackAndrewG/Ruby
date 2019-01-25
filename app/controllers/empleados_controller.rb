@@ -3,6 +3,7 @@ class EmpleadosController < ApplicationController
   #GET /empleados
   def index
       @empleados = Empleado.all
+      
   end
   #GET /empleados/new
   def new
@@ -21,7 +22,8 @@ class EmpleadosController < ApplicationController
        telefonoEmpleado: params[:empleado][:telefonoEmpleado],
        direccionEmpleado: params[:empleado][:direccionEmpleado],
        claveEmpleado: params[:empleado][:claveEmpleado],
-       correoEmpleado: params[:empleado][:correoEmpleado]
+       correoEmpleado: params[:empleado][:correoEmpleado],
+       departamento_id: params[:empleado][:departamento_id]
      )
      @empleado.save
      redirect_to @empleado

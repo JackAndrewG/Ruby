@@ -26,9 +26,13 @@
     <%= f.password_field :claveEmpleado, placeholder: 'contraseña', class:"form-control" %>
   </div>
 </div>
-<div class="form-group col-md-12">
+<div class="form-group col-md-6">
   <label for="inputAddress">Direccion:</label>
   <%= f.text_field :direccionEmpleado, placeholder: 'calle principal, secundaria, numero de casa', class:"form-control" %>
+</div>
+<div class="form-group col-md-6">
+  <label  for="inputDepartamento">Departamento</label>
+    <%= select( "empleado", "departamento_id", options_for_select(Departamento.all.collect {|p| [ p.nombreDepartamento, p.id, {"data-stuff"=>"html5"} ] })) %>
 </div>
 <%= f.submit 'Registrar'%>
 <% end -%>

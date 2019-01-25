@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190124191914) do
+ActiveRecord::Schema.define(version: 20190125023910) do
 
   create_table "departamentos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "nombreDepartamento"
@@ -30,6 +30,9 @@ ActiveRecord::Schema.define(version: 20190124191914) do
     t.string "correoEmpleado"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "departamento_id"
+    t.index ["departamento_id"], name: "index_empleados_on_departamento_id"
   end
 
+  add_foreign_key "empleados", "departamentos"
 end
