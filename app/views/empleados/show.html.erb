@@ -1,0 +1,18 @@
+<table class="table">
+    <thead>
+        <tr>
+ <th>Nombre</th><th>Apellido</th><th>Fecha</th><th>Telefono</th><th>Direccion</th><th>Correo</th><th>Clave</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr>
+      <td><%= @empleado.nombreEmpleado %></td>
+      <td><%= @empleado.apellidosEmpleado %></td>
+      <td><%= @empleado.fechaNacimiento %></td>
+      <td><%= @empleado.telefonoEmpleado %></td>
+      <td><%= @empleado.direccionEmpleado %></td>
+      <td><%= @empleado.correoEmpleado %></td>
+      <td><input type="text" value="<%= @empleado.claveEmpleado %>" disabled></td>
+      </tr>
+    </tbody>
+</table>

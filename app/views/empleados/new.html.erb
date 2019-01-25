@@ -1,0 +1,34 @@
+<title>Registro</title>
+<%= form_for(@empleado) do |f| %>
+<div class="form-row">
+  <div class="form-group col-md-3">
+    <label for="inputnombre">Nombres</label>
+    <%= f.text_field :nombreEmpleado, placeholder: "María Fernanda", class:"form-control" %>
+  </div>
+  <div class="form-group col-md-3">
+    <label for="inputapellido">Apellidos</label>
+    <%= f.text_field :apellidosEmpleado, placeholder: "González Gómez", class:"form-control"%>
+  </div>
+  <div class="form-group col-md-3">
+    <label for="inputedad">Facha Nacimineto</label>
+    <%= f.date_field :fechaNacimiento, placeholder: '0', class:"form-control" %>
+  </div>
+  <div class="form-group col-md-3">
+    <label for="inputedad">Telefono/Celular</label>
+    <%= f.text_field :telefonoEmpleado, placeholder: '0999999999', class:"form-control" %>
+  </div>
+  <div class="form-group col-md-6">
+    <label for="inputEmail4">Correo Electronico</label>
+    <%= f.email_field :correoEmpleado, placeholder: 'correo@correo.com', class:"form-control" %>
+  </div>
+  <div class="form-group col-md-6">
+    <label for="inputPassword4">Contraseña</label>
+    <%= f.password_field :claveEmpleado, placeholder: 'contraseña', class:"form-control" %>
+  </div>
+</div>
+<div class="form-group col-md-12">
+  <label for="inputAddress">Direccion:</label>
+  <%= f.text_field :direccionEmpleado, placeholder: 'calle principal, secundaria, numero de casa', class:"form-control" %>
+</div>
+<%= f.submit 'Registrar'%>
+<% end -%>
